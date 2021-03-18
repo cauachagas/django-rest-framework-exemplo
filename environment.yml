@@ -7,3 +7,4 @@ dependencies:
   - django<=3.17
   - djangorestframework<=3.12.2
   - pip
+  - pillow<=8.1.2
