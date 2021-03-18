@@ -13,8 +13,7 @@ Nesse [link](https://github.com/cauachagas/cling-torch#passo-1---instalando-mini
 3. Ative o ambiente do passo anterior;
 4. Instale as dependências;
 5. Faça as migraçãos;
-6. Crie um super usuário para acessar a interface admin.
-7. Inicie o servidor.
+6. Inicie o servidor.
 
 Caso use o `miniconda/anaconda` e tenha os scripts `conda` e `activate` no `$PATH` então o passos serão esses
 
@@ -24,7 +23,6 @@ cd django-rest-api-exemplo
 conda env create -f environment.yml
 source activate django
 python manage.py migrate
-python manage.py createsuperuser
 python manage.py runserver
 ```
 
