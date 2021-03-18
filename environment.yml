@@ -1,0 +1,9 @@
+name: django
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python<=3.6.13
+  - django<=3.17
+  - djangorestframework<=3.12.2
+  - pip
