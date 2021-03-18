@@ -4,7 +4,7 @@ from uuid import uuid4
 # Create your models here.
 
 
-def upload_imagem_livro():
+def upload_imagem_livro(instance, filename):
     return f"{instance.id}-{filename}"
 
 
@@ -18,4 +18,4 @@ class Livros(models.Model):
     editora = models.CharField(max_length=255)
     criado = models.DateField(auto_now_add=True)
     imagem = models.ImageField(
-        upload_to=upload_imagem_livro, height_field=None, width_field=None, max_length=100, blank=True, null=True)
+        upload_to=upload_imagem_livro, blank=True, null=True)
