@@ -8,3 +8,6 @@ dependencies:
   - djangorestframework<=3.12.2
   - pip
   - pillow<=8.1.2
+  # caso queira fazer deploy no heroku
+  # pip:
+  # - django-heroku<=0.3.1
