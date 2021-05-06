@@ -4,7 +4,7 @@ Esse simples repositório tem como objetivo servir como para a criação de outr
 
 ## Primeiros passos
 
-O ideal é criar um ambiente de desenvolvimento virtual para rodar o projeto. Geralmente, é romendado o uso do `virtualenv`.
+O ideal é criar um ambiente de desenvolvimento virtual para rodar o projeto. Geralmente, é recomendado o uso do `virtualenv`.
 
 Nesse [link](https://github.com/cauachagas/cling-torch#passo-1---instalando-miniconda) mostro como instalar o `miniconda` e criar um ambiente de desenvolvimento. Útil para criação de ambientes virtuais com dependências fora do Python, como compiladores e utilitários.
 
@@ -17,13 +17,13 @@ Nesse [link](https://github.com/cauachagas/cling-torch#passo-1---instalando-mini
 5. Faça as migrações;
 6. Inicie o servidor.
 
-Caso use o `miniconda/anaconda` e tenha os scripts `conda` e `activate` no `$PATH` então o passos serão esses
+Usando o módulo `venv` para a criação do ambiente virtual, os passos serão esses
 
 ```bash
 git clone https://github.com/cauachagas/django-rest-api-exemplo
 cd django-rest-api-exemplo
-conda env create -f environment.yml
-source activate django
+python3 -m venv venv
+source venv/bin/activate
 python manage.py makemigrations livros
 python manage.py migrate
 python manage.py runserver
