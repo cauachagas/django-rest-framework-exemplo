@@ -1,10 +1,12 @@
 # Iniciando com Django REST Framework
 
+Esse simples repositório tem como objetivo servir como para a criação de outros projetos. Atualmente, além do tradicional [django-rest-framework](https://www.django-rest-framework.org/) para a criação de API Web, foi adicionado o [django-ninja](https://django-ninja.rest-framework.com) que usa o Swagger.
+
 ## Primeiros passos
 
-O ideal é criar um ambiente de desenvolvimento virtual para rodar o projeto. Geralmente, recomendam o uso do `virtualenv`. Caso queira fazer deploy de uma aplicação Django no Heroku é melhor usar uma versão `3.6 >= 3.6.x <= 3.6.13` do Python, que pode ser facilmente instalado pelo `miniconda/anaconda`.
+O ideal é criar um ambiente de desenvolvimento virtual para rodar o projeto. Geralmente, é romendado o uso do `virtualenv`.
 
-Nesse [link](https://github.com/cauachagas/cling-torch#passo-1---instalando-miniconda) mostro como instalar o miniconda e criar um ambiente de desenvolvimento.
+Nesse [link](https://github.com/cauachagas/cling-torch#passo-1---instalando-miniconda) mostro como instalar o `miniconda` e criar um ambiente de desenvolvimento. Útil para criação de ambientes virtuais com dependências fora do Python, como compiladores e utilitários.
 
 ## Como rodar o projeto
 
@@ -12,7 +14,7 @@ Nesse [link](https://github.com/cauachagas/cling-torch#passo-1---instalando-mini
 2. Crie um ambiente de desenvolvimento;
 3. Ative o ambiente do passo anterior;
 4. Instale as dependências;
-5. Faça as migraçãos;
+5. Faça as migrações;
 6. Inicie o servidor.
 
 Caso use o `miniconda/anaconda` e tenha os scripts `conda` e `activate` no `$PATH` então o passos serão esses
@@ -22,14 +24,21 @@ git clone https://github.com/cauachagas/django-rest-api-exemplo
 cd django-rest-api-exemplo
 conda env create -f environment.yml
 source activate django
+python manage.py makemigrations livros
 python manage.py migrate
 python manage.py runserver
 ```
 
 Em seguida abra o link http://localhost:8000/ no seu navegador.
 
+## OpenAPI
+
+Para ver a documentação da API, abra o link http://localhost:8000/api/docs no seu navegador.
+
+![](https://drive.google.com/uc?export=view&id=1v8oPPN6gUdxMPRqS5DUGnTAzwJjruMMI)
+
 ## Referências
 
 - https://www.udemy.com/course/crie-restful-api-com-django-rest-framework-para-qualquer-um/
-
 - https://www.django-rest-framework.org/
+- https://django-ninja.rest-framework.com/
